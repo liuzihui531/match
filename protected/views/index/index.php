@@ -1,0 +1,175 @@
+<div class="main" name="m1" id="m1">
+    <div class="main_con">
+        <div class="main1_con_tit"></div>
+        <div class="main1_con1">
+            <div class="main1_con1_l"><img src="/front/images/bg_pic1.gif" width="287" height="386" /></div>
+            <div class="main1_con1_r">
+                <div class="main1_con1_r_tit">大赛宗旨</div>
+                <div class="main1_con1_r_con">为适应当前海南"互联网+"三农服务，大赛旨在搭建海南青年农村电商人才赛事交流平台，支持和
+                    引导青年参与农村电商创业，挖掘和培养海南青年农村电商人才，扶持一批优秀电商创业项目，发挥
+                    带头人创新创业和示范引领的作用，促进电商平台发展，推动互联网与传统农业的融合，助力海南
+                    农业现代化发展，营造全社会关心支持青年电商创业的良好氛围。</div>
+                <div class="main1_con1_r_more"><a href="<?php echo $this->createUrl('about'); ?>">查看详细参赛要求 +</a></div>
+            </div>
+        </div>
+
+        <div class="main1_con2">
+            <div class="main1_con2_l">
+                <div class="main1_con2_l_tit">赛事新闻</div>
+                <ul>
+                    <li><a href="#"><span>这里是标题这里是标题这里是标题</span><i>10/29</i></a></li>
+                    <li><a href="#"><span>这里是标题</span><i>10/29</i></a></li>
+                    <li><a href="#"><span>这里是标题</span><i>10/29</i></a></li>
+                    <li><a href="#"><span>这里是标题</span><i>10/29</i></a></li>
+                    <li><a href="#"><span>这里是标题</span><i>10/29</i></a></li>
+                </ul>
+            </div>
+            <div class="main1_con2_r">
+                <div class="main1_con2_r_tit">赛事日程</div>
+                <div class="main1_con2_r_con">
+                    <p>报名时间，报名截止时间为2016年10月25日。</p>
+                    <p>初赛（10月28日前）</p>
+                    <p>电商市集暨复赛（11月上旬）</p>
+                    <p>决赛（11月下旬）</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main1_con3">
+            <div class="main1_con3_tit">奖金和表彰</div>
+            <div class="main1_con3_con">
+                <div class="main1_con3_con_l">
+                    <h3>企业（团队组）</h3>
+                    <p>一等奖：一名（奖金10万元）</p>
+                    <p>二等奖：三名（奖5万元）</p>
+                    <p>三等奖：六名（奖3万元）</p>
+                    <p>优秀奖：十名（奖5千元，颁发获奖证书）</p>
+                </div>
+                <div class="main1_con3_con_r">
+                    <h3>个人技能组</h3>
+                    <p class="g">分网店设计、运营策划两类，分别评出一、二、三等奖共十二名</p>
+                    <p>一等奖：各一名（奖金各2万元）</p>
+                    <p>二等奖：各三名（奖各1.5万元）</p>
+                    <p>三等奖：各三名（奖各1万元，颁发获奖证书）</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main" name="m2" id="m2">
+    <div class="main_con">
+        <div class="main2_tit"></div>
+        <div class="main2_con">
+            <ul>
+                <li><a href="<?php echo $this->createUrl("reg/enterprise"); ?>" title="进入企业（团队）组报名">企业组 ></a></li>
+                <li><a href="<?php echo $this->createUrl("person/index"); ?>" title="进入个人组报名">个人组 ></a></li>
+                <li><a href="<?php echo $this->createUrl("market/index"); ?>" title="进入电商市集报名">电商市集 ></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="main" name="m3" id="m3">
+    <div class="main_con">
+        <div class="main3_tit"></div>
+        <div class="main3_con">
+            <div class="baguetteBoxOne gallery main3_con_pic">
+                <a href="/front/images/1-1.jpg"><img src="/front/images/thumbs/1-1.jpg"></a>
+                <a href="/front/images/1-2.jpg" title="Midnight City"><img src="/front/images/thumbs/1-2.jpg"></a>
+                <a href="/front/images/1-3.jpg"><img src="/front/images/thumbs/1-3.jpg"></a>
+                <a href="/front/images/1-4.jpg"><img src="/front/images/thumbs/1-4.jpg"></a>
+                <a href="/front/images/1-5.jpg"><img src="/front/images/thumbs/1-5.jpg"></a>
+                <a href="/front/images/1-6.jpg"><img src="/front/images/thumbs/1-6.jpg"></a>
+            </div>
+            <script>
+                baguetteBox.run('.baguetteBoxOne', {
+                    animation: 'fadeIn',
+                });
+            </script>
+        </div>
+    </div>
+</div>
+
+<div class="main" name="m4" id="m4">
+    <div class="main_con">
+        <div class="main4_tit"></div>
+        <div class="main4_con">
+            <div class="main4_con_l">
+                <div class="main4_con_l_tit">电商产品展示</div>
+                <div class="main4_con_l_con">
+                    <ul>
+                        <li><a href="#">这里是电商产品的链接标题</a></li>
+                        <li><a href="#">这里是电商产品的链接标题</a></li>
+                        <li><a href="#">这里是电商产品的链接标题</a></li>
+                        <li><a href="#">这里是电商产品的链接标题</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main4_con_r"></div>
+        </div>
+    </div>
+</div>
+
+<div class="main" name="m5" id="m5">
+    <div class="main_con">
+        <div class="main5_tit"></div>
+        <div class="main5_con">
+            <ul>
+                <li>
+                    <div class="main5_con_pic"><img src="/front/images/demo5.jpg" /></div>
+                    <div class="main5_con_des"><p><b>韩愈</b></p><p>中国著名诗人</p></div>
+                </li>
+                <li>
+                    <div class="main5_con_pic"><img src="/front/images/demo5.jpg" /></div>
+                    <div class="main5_con_des"><p><b>韩愈</b></p><p>中国著名诗人</p></div>
+                </li>
+                <li>
+                    <div class="main5_con_pic"><img src="/front/images/demo5.jpg" /></div>
+                    <div class="main5_con_des"><p><b>韩愈</b></p><p>中国著名诗人</p></div>
+                </li>
+                <li>
+                    <div class="main5_con_pic"><img src="/front/images/demo5.jpg" /></div>
+                    <div class="main5_con_des"><p><b>韩愈</b></p><p>中国著名诗人</p></div>
+                </li>
+                <li>
+                    <div class="main5_con_pic"><img src="/front/images/demo5.jpg" /></div>
+                    <div class="main5_con_des"><p><b>韩愈</b></p><p>中国著名诗人</p></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="main" name="m6" id="m6">
+    <div class="main_con">
+        <div class="main6_tit"></div>
+        <div class="main6_con">
+            <ul>
+                <li><a href="#">共青团海南省委</a></li>
+                <li><a href="#">中共海南省委组织部</a></li>
+                <li><a href="#">海南省农业厅</a></li>
+                <li><a href="#">海南省商务厅</a></li>
+                <li><a href="#">陵水县人民政府</a></li>
+                <li><a href="#">海南青年创业就业服务中心</a></li>
+                <li><a href="#">阿里巴巴集团乡村事业部<br />（农村淘宝）</a></li>
+                <li><a href="#">陵水互联网创业园</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footer_con">
+        <p>海南青年创业就业服务中心</p>
+        <p>© 2016 Hcyc.cn 版权所有 ICP证：琼ICP备16002852号</p>
+    </div>
+</div>
+</div>
+
+<div id="tbox">
+    <a id="baoming" href="#m2"></a>
+    <a id="gotop" href="javascript:void(0)"></a>
+</div>
+
+
