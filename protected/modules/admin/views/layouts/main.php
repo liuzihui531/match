@@ -171,7 +171,7 @@ window.jQuery || document.write("<script src='<?php echo Yii::app()->params['hos
                             </a>
 
                         </li>
-                        <li <?php if (in_array($controller_id, array('news_category', 'news'))): ?>class="active open"<?php endif; ?>>
+                        <li <?php if (in_array($controller_id, array('team_registration', 'person','market'))): ?>class="active open"<?php endif; ?>>
                             <a href="#" class="dropdown-toggle">
                                 <i class="icon-edit"></i>
                                 <span class="menu-text"> 报名信息 </span>
@@ -187,10 +187,16 @@ window.jQuery || document.write("<script src='<?php echo Yii::app()->params['hos
                                     </a>
                                 </li>
 
-                                <li <?php if ($controller_id == 'news'): ?>class="active"<?php endif; ?>>
-                                    <a <?php if ($controller_id == 'news'): ?>class="active"<?php endif; ?> href="<?php echo $this->createUrl('/admin/news') ?>">
+                                <li <?php if ($controller_id == 'person'): ?>class="active"<?php endif; ?>>
+                                    <a <?php if ($controller_id == 'person'): ?>class="active"<?php endif; ?> href="<?php echo $this->createUrl('/admin/person') ?>">
                                         <i class="icon-double-angle-right"></i>
                                         个人组
+                                    </a>
+                                </li>
+                                <li <?php if ($controller_id == 'market'): ?>class="active"<?php endif; ?>>
+                                    <a <?php if ($controller_id == 'market'): ?>class="active"<?php endif; ?> href="<?php echo $this->createUrl('/admin/market') ?>">
+                                        <i class="icon-double-angle-right"></i>
+                                        电商集市
                                     </a>
                                 </li>
                             </ul>

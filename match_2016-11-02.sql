@@ -7,7 +7,7 @@
 #
 # Host: 192.168.1.162 (MySQL 5.6.23-log)
 # Database: match
-# Generation Time: 2016-11-01 16:14:50 +0000
+# Generation Time: 2016-11-01 17:10:15 +0000
 # ************************************************************
 
 
@@ -68,15 +68,16 @@ CREATE TABLE `market` (
   `charge_second` varchar(128) NOT NULL DEFAULT '' COMMENT '第二负责人',
   `mobile_second` varchar(128) NOT NULL DEFAULT '' COMMENT '联系电话',
   `created` int(11) NOT NULL DEFAULT '0',
+  `user_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `market` WRITE;
 /*!40000 ALTER TABLE `market` DISABLE KEYS */;
 
-INSERT INTO `market` (`id`, `product`, `introduce`, `outtime`, `s_standard`, `z_standard`, `charge`, `mobile`, `charge_second`, `mobile_second`, `created`)
+INSERT INTO `market` (`id`, `product`, `introduce`, `outtime`, `s_standard`, `z_standard`, `charge`, `mobile`, `charge_second`, `mobile_second`, `created`, `user_id`)
 VALUES
-	(3,'1','2','','','','','','','',1478015017);
+	(3,'1','2','','','','','','','',1478015017,0);
 
 /*!40000 ALTER TABLE `market` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -288,15 +289,16 @@ CREATE TABLE `person` (
   `file` varchar(64) NOT NULL DEFAULT '' COMMENT '文件',
   `remarks` text COMMENT '备注',
   `created` int(11) NOT NULL COMMENT '报名时间',
+  `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `person` WRITE;
 /*!40000 ALTER TABLE `person` DISABLE KEYS */;
 
-INSERT INTO `person` (`id`, `group`, `city`, `school`, `name`, `birth`, `domicile`, `id_card`, `is_illegal`, `education`, `mobile`, `email`, `work`, `url`, `file`, `remarks`, `created`)
+INSERT INTO `person` (`id`, `group`, `city`, `school`, `name`, `birth`, `domicile`, `id_card`, `is_illegal`, `education`, `mobile`, `email`, `work`, `url`, `file`, `remarks`, `created`, `user_id`)
 VALUES
-	(1,1,1,'111','11',868377600,'111','111','111','111','11','1111','111','1111','','1111',1477826686);
+	(1,1,1,'111','11',868377600,'111','111','111','111','11','1111','111','1111','','1111',1477826686,0);
 
 /*!40000 ALTER TABLE `person` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -360,19 +362,20 @@ CREATE TABLE `team_registration` (
   `introduction` text COMMENT '简介',
   `file_rep` varchar(128) NOT NULL DEFAULT '' COMMENT '附件',
   `created` int(11) NOT NULL COMMENT '报名时间',
+  `user_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `team_registration` WRITE;
 /*!40000 ALTER TABLE `team_registration` DISABLE KEYS */;
 
-INSERT INTO `team_registration` (`id`, `city`, `school`, `rep_name`, `birth`, `id_card`, `is_illegal`, `education`, `mobile`, `email`, `enterprise`, `credit`, `platform`, `introduction`, `file_rep`, `created`)
+INSERT INTO `team_registration` (`id`, `city`, `school`, `rep_name`, `birth`, `id_card`, `is_illegal`, `education`, `mobile`, `email`, `enterprise`, `credit`, `platform`, `introduction`, `file_rep`, `created`, `user_id`)
 VALUES
-	(1,18,'111','1111',868377600,'111111111111','111','11111','11111','11111','111','11111',1,'sdfsdfsdfsdfsdfds','',1477822299),
-	(3,18,'111','1111',868377600,'111111111111','111','11111','11111','11111','111','11111',1,'sdfsdfsdfsdfsdfds','',1477823175),
-	(4,1,'111','11',868377600,'11','111','111','11','11','11','111',1,'111','',1477823373),
-	(5,1,'111','11',868377600,'11','111','111','11','11','11','111',1,'111','',1477823446),
-	(6,1,'111','11',868377600,'11','111','111','11','11','11','111',1,'111','',1477823561);
+	(1,18,'111','1111',868377600,'111111111111','111','11111','11111','11111','111','11111',1,'sdfsdfsdfsdfsdfds','',1477822299,0),
+	(3,18,'111','1111',868377600,'111111111111','111','11111','11111','11111','111','11111',1,'sdfsdfsdfsdfsdfds','',1477823175,0),
+	(4,1,'111','11',868377600,'11','111','111','11','11','11','111',1,'111','',1477823373,0),
+	(5,1,'111','11',868377600,'11','111','111','11','11','11','111',1,'111','',1477823446,0),
+	(6,1,'111','11',868377600,'11','111','111','11','11','11','111',1,'111','',1477823561,0);
 
 /*!40000 ALTER TABLE `team_registration` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -470,6 +473,31 @@ VALUES
 	(61,0,0,0,0,'573d9321a5956.jpg','/upload/1605/1918/19/573d9321a5956.jpg',220014,'jpg','','',1,1463653153);
 
 /*!40000 ALTER TABLE `upload` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table user
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `user` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(64) NOT NULL DEFAULT '',
+  `password` char(32) NOT NULL DEFAULT '',
+  `email` varchar(64) NOT NULL DEFAULT '',
+  `created` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+
+INSERT INTO `user` (`id`, `username`, `password`, `email`, `created`)
+VALUES
+	(1,'abc@qq.com','96e79218965eb72c92a549dd5a330112','abc@qq.com',1478019402);
+
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
 

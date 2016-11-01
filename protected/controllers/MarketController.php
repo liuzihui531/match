@@ -1,6 +1,6 @@
 <?php
 
-class MarketController extends IndexBaseController{
+class MarketController extends UcBaseController{
     //put your code here
     public function actionIndex(){
         $this->render('index');

@@ -1,6 +1,6 @@
 <?php
 
-class PersonController extends IndexBaseController {
+class PersonController extends UcBaseController {
     //put your code here
     public function actionIndex(){
         $area = ThisTools::getRegion();

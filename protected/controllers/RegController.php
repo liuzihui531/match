@@ -1,6 +1,6 @@
 <?php
 
-class RegController extends IndexBaseController {
+class RegController extends UcBaseController {
 
     //put your code here
     public function actionEnterprise() {

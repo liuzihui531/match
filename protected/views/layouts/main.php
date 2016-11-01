@@ -17,7 +17,12 @@
 <div class="header"></div>
 <div class="menu">
 	<div class="menu_con">
-    	<a href="#m1" class="on">大赛介绍</a><a href="#m2">报名通道</a><a href="#m3">赛事风采</a><a href="#m4">产品市集</a><a href="#m5">专家评委</a><a href="#m6">专题链接</a>
+    	<a href="<?php echo $this->createAbsoluteUrl("/") ?>#m1" class="on">大赛介绍</a><a href="#m2">报名通道</a><a href="#m3">赛事风采</a><a href="#m4">产品市集</a><a href="#m5">专家评委</a><a href="#m6">专题链接</a>
+    	<?php if(Yii::app()->user->id): ?>
+    		<a href="<?php echo $this->createUrl("/uc") ?>">个人中心</a>
+    	<?php else: ?>
+    		<a href="<?php echo $this->createUrl("/login") ?>">登录系统</a>
+    	<?php endif; ?>
     </div>
 </div>
 <div class="clear"></div>

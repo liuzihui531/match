@@ -6,7 +6,7 @@
 // CWebApplication properties can be configured here.
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-    'name' => 'xx公司',
+    'name' => '电商大赛',
     // preloading 'log' component
     'preload' => array('log'),
     'defaultController' => 'index',
