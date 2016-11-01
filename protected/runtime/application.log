@@ -1306,3 +1306,12 @@ Stack trace:
 REQUEST_URI=/admin/team_registration.html
 HTTP_REFERER=http://match.cn/admin.html
 ---
+2016/11/02 00:16:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /home/wwwroot/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/wwwroot/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/wwwroot/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/wwwroot/match/www/index.php(63): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://114.55.31.196/
+---
