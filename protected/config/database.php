@@ -7,6 +7,6 @@ return array(
 	'connectionString' => 'mysql:host=localhost;dbname=match',
 	'emulatePrepare' => true,
 	'username' => 'root',
-	'password' => 'root',
+	'password' => 'xaXQJhw93YuCSnZ3',
 	'charset' => 'utf8',
 );
