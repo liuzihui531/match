@@ -10,6 +10,7 @@
 			$model = new LoginForm();
 			$model->username = $email;
 			$model->password = $password;
+			$model->validate();
 			$model->login();
 			if($model->hasErrors()){
 				$this->error(Utils::getFirstError($model->errors));

@@ -42,5 +42,96 @@ class ThisTools {
         }
         return $return;
     }
+
+    public static function getMarketCangku($key=''){
+        $return = array('1'=>"是",'2'=>'否');
+        if($key){
+            if(key_exists($key, $return))
+                return $return[$key];
+        }
+        return $return;
+    }
+    public static function getMarketTool($key=''){
+        $return = array('1'=>"是",'2'=>'否');
+        if($key){
+            if(key_exists($key, $return))
+                return $return[$key];
+        }
+        return $return;
+    }
+    public static function getMarketLengcang($key=''){
+        $return = array('1'=>"是",'2'=>'否');
+        if($key){
+            if(key_exists($key, $return))
+                return $return[$key];
+        }
+        return $return;
+    }
+    public static function getMarketJiance($key=''){
+        $return = array('1'=>"是",'2'=>'否');
+        if($key){
+            if(key_exists($key, $return))
+                return $return[$key];
+        }
+        return $return;
+    }
+    public static function getMarketDapengsheshi($key=''){
+        $return = array('1'=>"是",'2'=>'否');
+        if($key){
+            if(key_exists($key, $return))
+                return $return[$key];
+        }
+        return $return;
+    }
+    public static function getMarketShengchansheshi($key=''){
+        $return = array('1'=>"是",'2'=>'否');
+        if($key){
+            if(key_exists($key, $return))
+                return $return[$key];
+        }
+        return $return;
+    }
+    public static function getMarketXinxihua($key=''){
+        $return = array('1'=>"是",'2'=>'否');
+        if($key){
+            if(key_exists($key, $return))
+                return $return[$key];
+        }
+        return $return;
+    }
+    public static function getMarketOnlineSale($key=''){
+        $return = array('1'=>"是",'2'=>'否');
+        if($key){
+            if(key_exists($key, $return))
+                return $return[$key];
+        }
+        return $return;
+    }
+    public static function getMarketQrcode($key=''){
+        $return = array('1'=>"是",'2'=>'否');
+        if($key){
+            if(key_exists($key, $return))
+                return $return[$key];
+        }
+        return $return;
+    }
+    public static function getMarketCoach($key=''){
+        $return = array('1'=>"农业培训",'2'=>'电子商务培训','3' => '营销培训','4' => '管理培训');
+        if($key){
+            if(key_exists($key, $return))
+                return $return[$key];
+        }
+        return $return;
+    }
+    public static function getMarketRongzi($key=''){
+        $return = array('1'=>"小额贷款",'2'=>'融资租赁','3' => '融资担保');
+        if($key){
+            if(key_exists($key, $return))
+                return $return[$key];
+        }
+        return $return;
+    }
+
+
     
 }

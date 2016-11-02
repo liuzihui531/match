@@ -49,6 +49,11 @@ class Market extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'user' => array(self::BELONGS_TO,'User','user_id'),
+			'products' => array(self::HAS_MANY,'MarketProduct','market_id'),
+			'service' => array(self::HAS_ONE,'MarketService','market_id'),
+			'sheshi' => array(self::HAS_ONE,'MarketSheshi','market_id'),
+			'xinxi' => array(self::HAS_ONE,'MarketXinxi','market_id'),
 		);
 	}
 

@@ -3,7 +3,14 @@
 class MarketController extends UcBaseController{
     //put your code here
     public function actionIndex(){
-        $this->render('index');
+        $id = Yii::app()->request->getParam("id",0);
+        $criteria = new CDbCriteria();
+        if($id){
+            $criteria->compare("id",$id);
+        }
+        $criteria->compare("user_id",Yii::app()->user->id);
+        $model = Market::model()->find($criteria);
+        $this->render('index',array('model'=>$model));
     }
 
     public function actionSave(){
@@ -14,10 +21,20 @@ class MarketController extends UcBaseController{
     	$market_service = Yii::app()->request->getParam("market_service",array());
     	$transaction = Yii::app()->db->beginTransaction();
     	try{
-    		if($market){
-    			$marketModel = new Market();
+    		if($market){                
+                $id = Yii::app()->request->getParam("id",0);
+                if($id){
+                    $marketModel = Market::model()->findByPk($id);
+                    MarketProduct::model()->deleteAllByAttributes(array("market_id"=>$marketModel->id));
+                    MarketSheshi::model()->deleteAllByAttributes(array("market_id"=>$marketModel->id));
+                    MarketXinxi::model()->deleteAllByAttributes(array("market_id"=>$marketModel->id));
+                    MarketService::model()->deleteAllByAttributes(array("market_id"=>$marketModel->id));
+                }else{
+                    $marketModel = new Market();
+                    $marketModel->created = time();
+                }
     			$marketModel->attributes = $market;
-    			$marketModel->created = time();
+                $marketModel->user_id = Yii::app()->user->id;
     			$marketModel->save();
     			if($marketModel->hasErrors()){
     				throw new Exception(Utils::getFirstError($marketModel->errors));    				
@@ -70,7 +87,7 @@ class MarketController extends UcBaseController{
     			}
     		}
     		$transaction->commit();
-    		$this->success("操作成功");
+    		$this->success("操作成功",$this->createUrl("/uc"));
     	}catch(Exception $e){
     		$transaction->rollback();
     		$this->error("操作失败：".$e->getMessage());
