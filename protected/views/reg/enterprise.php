@@ -59,7 +59,7 @@
 
                     <label>
                         <span>E-mail:</span>
-                        <input id="" type="email" name="rep[email]" value="<?php echo $model->email ?>" placeholder="E-mail" />*
+                        <input id="" type="text" name="rep[email]" value="<?php echo $model->email ?>" placeholder="E-mail" />*
                     </label>
 
 

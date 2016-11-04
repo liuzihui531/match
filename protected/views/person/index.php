@@ -101,7 +101,7 @@
 
             <label>
                 <span>备注:</span>
-                <input id="" type="text" name="person[remarks]" value="<?php echo $model->is_illegal ?>" placeholder="备注" />
+                <input id="" type="text" name="person[remarks]" value="<?php echo $model->remarks ?>" placeholder="备注" />
             </label>
 
             <label>

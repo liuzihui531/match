@@ -29,8 +29,10 @@
                                     <span class="lbl"></span>
                                 </label>
                             </th>
+                            <td>ID</td>
                             <th>城市</th>
                             <th>学校</th>
+                            <td>用户</td>
                             <th class="hidden-480">创建时间</th>
 
                             <th></th>
@@ -46,10 +48,13 @@
                                         <span class="lbl"></span>
                                     </label>
                                 </td>
+                                <td><?php echo $v->id ?></td>
                                 <td><?php echo $area[$v->city] ?></td>
                                 <td><?php echo $v->school ?></td>
+                                <td><?php echo isset($v->user) ? $v->user->email : "" ?></td>
                                 <td><?php echo date('Y-m-d H:i:s', $v->created) ?></td>
                                 <td>
+                                    <a href="<?php echo $this->createUrl('detail', array('id' => $v->id)) ?>">查看详情</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

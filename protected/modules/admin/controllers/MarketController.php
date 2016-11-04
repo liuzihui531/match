@@ -11,4 +11,11 @@
         	$sex = ThisTools::getSex();
 	        $this->render("index",array('model' => $model, 'pager' => $pager));
 		}
+
+		public function actionDetail(){
+			$this->breadcrumbs = array($this->page_name.'详情');
+			$id = Yii::app()->request->getParam("id",0);
+			$model = Market::model()->findByPk($id);
+			$this->render("detail",array('model'=>$model));
+		}
  }

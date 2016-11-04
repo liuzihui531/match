@@ -27,107 +27,133 @@ class ThisTools {
     
     public static function getSex($sex = ""){
         $return = array('0'=>"男",'1'=>'女');
-        if($sex){
+        if($sex !== ""){
             if(key_exists($sex, $return))
                 return $return[$sex];
+            else
+                return '';
         }
         return $return;
     }
     
     public static function getGroup($group = ""){
         $return = array('0'=>"设计",'1'=>'策划');
-        if($group){
+        if($group !== ""){
             if(key_exists($group, $return))
                 return $return[$group];
+            else
+                return '';
         }
         return $return;
     }
 
     public static function getMarketCangku($key=''){
         $return = array('1'=>"是",'2'=>'否');
-        if($key){
+        if($key !== ''){
             if(key_exists($key, $return))
                 return $return[$key];
+            else
+                return '';
         }
         return $return;
     }
     public static function getMarketTool($key=''){
         $return = array('1'=>"是",'2'=>'否');
-        if($key){
+        if($key !== ''){
             if(key_exists($key, $return))
                 return $return[$key];
+            else
+                return '';
         }
         return $return;
     }
     public static function getMarketLengcang($key=''){
         $return = array('1'=>"是",'2'=>'否');
-        if($key){
+        if($key !== ''){
             if(key_exists($key, $return))
                 return $return[$key];
+            else
+                return '';
         }
         return $return;
     }
     public static function getMarketJiance($key=''){
         $return = array('1'=>"是",'2'=>'否');
-        if($key){
+        if($key !== ''){
             if(key_exists($key, $return))
                 return $return[$key];
+            else
+                return '';
         }
         return $return;
     }
     public static function getMarketDapengsheshi($key=''){
         $return = array('1'=>"是",'2'=>'否');
-        if($key){
+        if($key !== ''){
             if(key_exists($key, $return))
                 return $return[$key];
+            else
+                return '';
         }
         return $return;
     }
     public static function getMarketShengchansheshi($key=''){
         $return = array('1'=>"是",'2'=>'否');
-        if($key){
+        if($key !== ''){
             if(key_exists($key, $return))
                 return $return[$key];
+            else
+                return '';
         }
         return $return;
     }
     public static function getMarketXinxihua($key=''){
         $return = array('1'=>"是",'2'=>'否');
-        if($key){
+        if($key !== ''){
             if(key_exists($key, $return))
                 return $return[$key];
+            else
+                return '';
         }
         return $return;
     }
     public static function getMarketOnlineSale($key=''){
         $return = array('1'=>"是",'2'=>'否');
-        if($key){
+        if($key !== ''){
             if(key_exists($key, $return))
                 return $return[$key];
+            else
+                return '';
         }
         return $return;
     }
     public static function getMarketQrcode($key=''){
         $return = array('1'=>"是",'2'=>'否');
-        if($key){
+        if($key !== ''){
             if(key_exists($key, $return))
                 return $return[$key];
+            else
+                return '';
         }
         return $return;
     }
     public static function getMarketCoach($key=''){
         $return = array('1'=>"农业培训",'2'=>'电子商务培训','3' => '营销培训','4' => '管理培训');
-        if($key){
+        if($key !== ''){
             if(key_exists($key, $return))
                 return $return[$key];
+            else
+                return '';
         }
         return $return;
     }
     public static function getMarketRongzi($key=''){
         $return = array('1'=>"小额贷款",'2'=>'融资租赁','3' => '融资担保');
-        if($key){
+        if($key !== ''){
             if(key_exists($key, $return))
                 return $return[$key];
+            else
+                return '';
         }
         return $return;
     }

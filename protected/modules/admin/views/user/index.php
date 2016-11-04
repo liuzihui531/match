@@ -9,7 +9,7 @@
                 <div class="widget-body">
                     <div class="widget-main">
                         <form class="form-inline" method="get">
-                            <input type="text" name="title" value="<?php echo Yii::app()->request->getParam('title', '') ?>" class="input-medium" placeholder="标题">
+                            <input type="text" name="email" value="<?php echo Yii::app()->request->getParam('email', '') ?>" class="input-medium" placeholder="邮箱账号">
                             <button type="submit" class="btn btn-purple btn-sm">
                                 搜索
                                 <i class="icon-search icon-on-right bigger-110"></i>
@@ -29,11 +29,8 @@
                                     <span class="lbl"></span>
                                 </label>
                             </th>
-                            <td>ID</td>
-                            <th>城市</th>
-                            <th>学校</th>
-                            <th>电商平台</th>
-                            <td>用户</td>
+                            <th>ID</th>
+                            <th>邮箱</th>
                             <th class="hidden-480">创建时间</th>
                             <th></th>
                         </tr>
@@ -49,13 +46,10 @@
                                     </label>
                                 </td>
                                 <td><?php echo $v->id ?></td>
-                                <td><?php echo $area[$v->city] ?></td>
-                                <td><?php echo $v->school ?></td>
-                                <td><?php echo $platform[$v->platform] ?></td>
-                                <td><?php echo isset($v->user) ? $v->user->email : "" ?></td>
+                                <td><?php echo $v->email ?></td>
                                 <td><?php echo date('Y-m-d H:i:s', $v->created) ?></td>
                                 <td>
-                                    <a href="<?php echo $this->createUrl('detail', array('id' => $v->id)) ?>">查看详情</a>
+                                    
                                 </td>
                             </tr>
                         <?php endforeach; ?>
