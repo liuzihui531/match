@@ -31,6 +31,12 @@
                             </th>
                             <th>ID</th>
                             <th>邮箱</th>
+                            <th>手机</th>
+                            <th>组别</th>
+                            <th>名字</th>
+                            <th>身份证号</th>
+                            <th>县市</th>
+                            <th>抽签号</th>
                             <th class="hidden-480">创建时间</th>
                             <th></th>
                         </tr>
@@ -47,6 +53,12 @@
                                 </td>
                                 <td><?php echo $v->id ?></td>
                                 <td><?php echo $v->email ?></td>
+                                <td><?php echo $v->mobile ?></td>
+                                <td><?php echo ThisTools::getUserGroup($v->group) ?></td>
+                                <td><?php echo $v->realname; ?></td>
+                                <td><?php echo $v->idcard ?></td>
+                                <td><?php echo ThisTools::getRegion($v->region_id) ?></td>
+                                <td><?php echo $v->sign_num ?></td>
                                 <td><?php echo date('Y-m-d H:i:s', $v->created) ?></td>
                                 <td>
                                     
