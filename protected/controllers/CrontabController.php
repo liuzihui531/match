@@ -487,13 +487,20 @@ $this->_user($html,$group);
 			$arr = explode("\n", $html);
 			foreach ($arr as $key => &$value) {
 				$value = preg_replace("/\s+/i", ",", $value);
-				$value = explode(",",$value);
+			}
+			//print_r($arr);exit;
+			$newArr = array();
+			foreach ($arr as $key => $value) {
+				if(is_string($value)){			
+					$value = explode(",",$value);
+					$newArr[$value[3]] = $value;
+				}
 			}
 			//echo "<pre>";
 			//print_r($arr);
 			$region = ThisTools::getRegion();
 			$sql = "insert into user (`username`,`password`,`email`,`realname`,`group`,`region_id`,`idcard`,`mobile`,`created`) values ";
-			foreach ($arr as $key => $value) {
+			foreach ($newArr as $key => $value) {
 				$mobile = $value[3];
 				$pwd = substr($value[2], -6);
 				//$password = $pwd;

@@ -18,9 +18,8 @@ class ThisTools {
 
     public static function getRegion($area_code = "") {
         $area = self::setRegion();
-        if($area_code){
-            if(key_exists($area_code, $area))
-                    return $area["$area_code"];
+        if($area_code !== ''){
+            return key_exists($area_code, $area) ? $area[$area_code] : "";
         }
         return $area;
     }
