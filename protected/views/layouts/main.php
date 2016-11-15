@@ -24,11 +24,6 @@
     	<a href="<?php echo $this->createAbsoluteUrl("/") ?>#m4">产品市集</a>
     	<a href="<?php echo $this->createAbsoluteUrl("/") ?>#m5">专家评委</a>
     	<a href="<?php echo $this->createAbsoluteUrl("/") ?>#m6">专题链接</a>
-    	<?php if(Yii::app()->user->id): ?>
-    		<a href="<?php echo $this->createUrl("/uc") ?>">个人中心</a>
-    	<?php else: ?>
-    		<a href="<?php echo $this->createUrl("/login") ?>">登录系统</a>
-    	<?php endif; ?>
     </div>
 </div>
 <div class="clear"></div>
