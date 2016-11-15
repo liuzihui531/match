@@ -3,7 +3,7 @@
 	<div class="show_tit">青年农村电商大赛报名系统</div>
     <div class="show_form">
         <div class="uc_con">
-        <h2>已登录用户<span>当前账号 :<?php echo Yii::app()->user->name ?> &nbsp;&nbsp;&nbsp;&nbsp;个人中心&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">修改报名表</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo $this->createUrl("/login/logout") ?>">安全退出</a></span> </h2>
+        <h2>已登录用户<span>当前账号 :<?php echo Yii::app()->user->name ?> &nbsp;&nbsp;&nbsp;&nbsp;个人中心&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">修改报名表</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo $this->createUrl("/login/logout") ?>">安全退出</a>&nbsp;&nbsp;&nbsp;&nbsp;<font class="sign_num"><?php if(!Yii::app()->session['user']->sign_num): ?><a href="javascript:void(0)" >排号抽签</a><?php else: ?>抽签号：<?php echo Yii::app()->session['user']->sign_num ?><?php endif; ?></font></span> </h2>
         
         <h2>已参报信息
             <?php if($regModel): ?>
@@ -32,3 +32,17 @@
 </div>
 
 </div>
+<script type="text/javascript">
+    $(function(){
+        $(".sign_num a").bind("click",function(){
+            var url = "<?php echo $this->createUrl("buildSign") ?>";
+            $.post(url,{},function(data){
+                if(data.sta == 1){
+                    $(".sign_num").html("抽签号："+data.msg);
+                }else{
+                    alert(data.msg);
+                }
+            },'json');
+        });
+    });
+</script>

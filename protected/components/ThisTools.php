@@ -2,6 +2,20 @@
 
 class ThisTools {
 
+    public static function getUserGroup($key = ''){
+        $data = array(
+            1 => '个人组（营销策划类）海口地区',
+            2 => '个人组（营销策划类）其他市县',
+            3 => '个人组（设计类）',
+            4 => '企业组海口地区',
+            5 => '企业组其他市县',
+        );
+        if($key !== ''){
+            return array_key_exists($key,$data) ? $data[$key] : "";
+        }
+        return $data;
+    }
+
     public static function getRegion($area_code = "") {
         $area = self::setRegion();
         if($area_code){

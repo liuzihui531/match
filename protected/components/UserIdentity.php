@@ -20,7 +20,10 @@ class UserIdentity extends CUserIdentity {
     private $user;
 
     public function authenticate() {
-        $users = User::model()->findByAttributes(array('email' => $this->username));
+        $criteria = new CDbCriteria();
+        $username = $this->username;
+        $criteria->addCondition("email='{$username}' OR username='{$username}' OR mobile='{$username}'");
+        $users = User::model()->find($criteria);
         if (!isset($users))
             $this->errorCode = self::ERROR_USERNAME_INVALID;
         elseif ($users->password !== Utils::password($this->password))
