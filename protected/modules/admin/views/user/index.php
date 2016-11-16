@@ -10,6 +10,7 @@
                     <div class="widget-main">
                         <form class="form-inline" method="get">
                             <input type="text" name="email" value="<?php echo Yii::app()->request->getParam('email', '') ?>" class="input-medium" placeholder="邮箱账号">
+                            <input type="text" name="mobile" value="<?php echo Yii::app()->request->getParam('mobile', '') ?>" class="input-medium" placeholder="手机号码">
                             <button type="submit" class="btn btn-purple btn-sm">
                                 搜索
                                 <i class="icon-search icon-on-right bigger-110"></i>
