@@ -9,7 +9,7 @@
                     引导青年参与农村电商创业，挖掘和培养海南青年农村电商人才，扶持一批优秀电商创业项目，发挥
                     带头人创新创业和示范引领的作用，促进电商平台发展，推动互联网与传统农业的融合，助力海南
                     农业现代化发展，营造全社会关心支持青年电商创业的良好氛围。</div>
-                <div class="main1_con1_r_more"><a href="<?php echo $this->createUrl('about'); ?>">查看详细参赛要求 +</a></div>
+                <div class="main1_con1_r_more"><a href="<?php echo $this->createUrl('about'); ?>#menu">查看详细参赛要求 +</a></div>
             </div>
         </div>
 

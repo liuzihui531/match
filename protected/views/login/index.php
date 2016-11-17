@@ -3,18 +3,15 @@
     <div class="show_form">
 
     	<form action="<?php echo $this->createUrl("login") ?>" method="post" class="bootstrap-frm" >
-        <h2>登录系统<span>登录后可查看或修改您的报名表信息。如您没有账号，请先 <a href="<?php echo $this->createUrl("/register") ?>">注册</a></span></h2>
+        <h2>登录系统<span>已报名用户可登录并进行抽签。如果您无法登录，请致电：0898-66729363 咨询。<br />请注意：未报名用户禁止登录。</h2>
         	<label>
 				<span>登录账号 :</span>
-				<input id="" type="text" name="email" placeholder="请使用E-mail作为登录" />*
+				<input id="" type="text" name="email" placeholder="请输入手机号或E-mail" />*
 			</label>
-            
             <label>
 				<span>登录密码:</span>
 				<input id="" type="text" name="password" placeholder="请输入登录密码" />*
 			</label>
-         
-        	
             <label>
 			<span>&nbsp;</span>
 			<input type="submit" class="button" value="提交" />
@@ -25,4 +22,12 @@
         <p>&nbsp;</p>
         <p>&nbsp;</p>
     </div>
+</div>
+
+<div class="footer">
+    <div class="footer_con">
+        <p>海南青年创业就业服务中心</p>
+        <p>© 2016 Hcyc.cn 版权所有 ICP证：琼ICP备16002852号</p>
+    </div>
+</div>
 </div>
