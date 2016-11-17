@@ -11,6 +11,12 @@
                         <form class="form-inline" method="get">
                             <input type="text" name="email" value="<?php echo Yii::app()->request->getParam('email', '') ?>" class="input-medium" placeholder="邮箱账号">
                             <input type="text" name="mobile" value="<?php echo Yii::app()->request->getParam('mobile', '') ?>" class="input-medium" placeholder="手机号码">
+                            <select name="group">
+                                <option value="-1">--请选择分组--</option>
+                                <?php foreach(ThisTools::getUserGroup() as $k => $v): ?>
+                                    <option value="<?php echo $k ?>"><?php echo $v; ?></option>
+                                <?php endforeach;?>
+                            </select>
                             <button type="submit" class="btn btn-purple btn-sm">
                                 搜索
                                 <i class="icon-search icon-on-right bigger-110"></i>
@@ -62,7 +68,6 @@
                                 <td><?php echo $v->sign_num ?></td>
                                 <td><?php echo date('Y-m-d H:i:s', $v->created) ?></td>
                                 <td>
-                                    
                                 </td>
                             </tr>
                         <?php endforeach; ?>
