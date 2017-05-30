@@ -171,6 +171,26 @@ class ThisTools {
         return $return;
     }
 
+    public static function getBusinessPlatform($key=''){
+        $return = array('1'=>"淘宝",'2'=>'天猫','3' => '京东','4' => '微信','5' => '其他');
+        if($key !== ''){
+            if(key_exists($key, $return))
+                return $return[$key];
+            else
+                return '';
+        }
+        return $return;
+    }
 
+    public static function getGender($key = ''){
+        $return = array('1'=>"先生",'2'=>'女士');
+        if($key !== ''){
+            if(key_exists($key, $return))
+                return $return[$key];
+            else
+                return '';
+        }
+        return $return;
+    }
     
 }

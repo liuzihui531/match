@@ -5,7 +5,7 @@
 			$this->breadcrumbs = array($this->page_name.'管理');
 			$criteria = new CDbCriteria();
 	        $pager = new CPagination(Market::model()->count($criteria));
-            $pager->pageSize = $pageSize;
+            $pager->pageSize = 10;
             $pager->applyLimit($criteria);
 	        $model = Market::model()->findAll($criteria);
         	$sex = ThisTools::getSex();

@@ -113,8 +113,9 @@ class Controller extends CController {
             'wait' => $wait,
             'type' => $type
         );
+
         Yii::app()->user->setFlash('showmessage', $info);
-        if(Yii::app()->controller->module->id == 'admin' || Yii::app()->controller->module->id == 'company'|| Yii::app()->controller->module->id == 'areamanager'){
+        if((Yii::app()->controller->module) && (Yii::app()->controller->module->id == 'admin' || Yii::app()->controller->module->id == 'company'|| Yii::app()->controller->module->id == 'areamanager')){
             Yii::app()->runController("Site/ShowMessage");
         }else{
             Yii::app()->runController("Site/FrontShowMessage");
