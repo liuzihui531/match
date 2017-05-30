@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>2017创青春 海南省青年农村电商大赛</title>
+<title>2016创青春 海南省青年农村电商大赛</title>
 <link rel="stylesheet" type="text/css" href="/front/css/style.css">
 <link rel="stylesheet" href="/front/css/baguettebox.min.css">
 <script type="text/javascript" src="/front/js/jquery.js"></script>
