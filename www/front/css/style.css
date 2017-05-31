@@ -186,7 +186,7 @@ padding-right: 10px;
 margin-top: 10px;
 color: #333;
 }
-.bootstrap-frm input[type="text"], .bootstrap-frm input[type="file"], .bootstrap-frm input[type="email"], .bootstrap-frm textarea, .bootstrap-frm select,input[type="date"]{
+.bootstrap-frm input[type="text"], .bootstrap-frm input[type="file"], .bootstrap-frm input[type="email"], .bootstrap-frm textarea, .bootstrap-frm select,input[type="date"],input[type="password"]{
 border: 1px solid #CCC;
 font-size:14px;
 color: #888;
