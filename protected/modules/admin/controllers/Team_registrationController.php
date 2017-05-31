@@ -4,12 +4,12 @@
 		public function actionIndex(){
 			$this->breadcrumbs = array($this->page_name.'管理');
 			$criteria = new CDbCriteria();
-			$count = Apply::model()->count($criteria);
+			$count = User::model()->count($criteria);
 	        $pager = new CPagination($count);
 	        $pageSize = 10;
             $pager->pageSize = $pageSize;
             $pager->applyLimit($criteria);
-	        $model = Apply::model()->findAll($criteria);
+	        $model = User::model()->findAll($criteria);
 	        $area = ThisTools::getRegion();
 	        $platform = ThisTools::getBusinessPlatform();
         	$sex = ThisTools::getGender();
@@ -19,7 +19,7 @@
 		public function actionDetail(){
 			$this->breadcrumbs = array($this->page_name.'详情');
 			$id = Yii::app()->request->getParam("id",0);
-			$model = Apply::model()->findByPk($id);
+			$model = User::model()->findByPk($id);
 			$people_info = !empty($model->people_info) ? json_decode($model->people_info, true) : array();
 			$this->render("detail",array('model'=>$model, 'people_info' => $people_info));
 		}

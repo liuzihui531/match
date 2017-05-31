@@ -180,12 +180,12 @@ window.jQuery || document.write("<script src='<?php echo Yii::app()->params['hos
                             </a>
 
                             <ul class="submenu">
-                                <li <?php if ($controller_id == 'user'): ?>class="active"<?php endif; ?>>
+                                <!--<li <?php if ($controller_id == 'user'): ?>class="active"<?php endif; ?>>
                                     <a <?php if ($controller_id == 'user'): ?>class="active"<?php endif; ?> href="<?php echo $this->createUrl('/admin/user') ?>">
                                         <i class="icon-double-angle-right"></i>
                                         用户管理
                                     </a>
-                                </li>
+                                </li>-->
                                 <li <?php if ($controller_id == 'team_registration'): ?>class="active"<?php endif; ?>>
                                     <a <?php if ($controller_id == 'team_registration'): ?>class="active"<?php endif; ?> href="<?php echo $this->createUrl('/admin/team_registration') ?>">
                                         <i class="icon-double-angle-right"></i>

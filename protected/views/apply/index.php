@@ -6,6 +6,18 @@
                     <input type="hidden" name="id" value="<?php echo $model->id ?>" />
             <?php endif; ?>
             <h2>参赛基本信息<span>请务必填写真实信息</span></h2>
+            <label>
+                <span>手机号码:</span>
+                <input id="" type="text" name="mobile" value="<?php echo $model->mobile ?>"  placeholder="将用于系统登录账号" />*
+            </label>
+            <label>
+                <span>密码:</span>
+                <input id="" type="password" name="password" value=""  placeholder="将用于系统登录密码" />*
+            </label>
+            <label>
+                <span>确认密码:</span>
+                <input id="" type="password" name="password2" value=""  placeholder="将用于系统登录密码" />*
+            </label>
 
             <div class="fcheckbox">
                 <div class="fcheckbox_name">所属县市 *:</div>
@@ -40,13 +52,7 @@
                 <span>学历和毕业院校:</span>
                 <input id="" type="text" name="degree" value="<?php //echo $model->degree ?>"  placeholder="学历和毕业院校" />*
             </label>
-
-
-            <label>
-                <span>联系电话:</span>
-                <input id="" type="text" name="mobile" value="<?php echo $model->mobile ?>"  placeholder="联系电话" />*
-            </label>
-
+            
             <label>
                 <span>邮箱:</span>
                 <input id="" type="text" name="email" value="<?php //echo $model->email ?>"  placeholder="邮箱" />*
