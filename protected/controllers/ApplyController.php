@@ -1,9 +1,6 @@
 <?php 
 class ApplyController extends Controller{
 	public function actionIndex(){
-		if(!Yii::app()->user->id){
-			$this->redirect('/login');
-		}
 		$model = new Apply();
         $this->render('index',array('model'=>$model));
 	}
