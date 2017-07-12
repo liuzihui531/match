@@ -171,7 +171,7 @@ window.jQuery || document.write("<script src='<?php echo Yii::app()->params['hos
                             </a>
 
                         </li>
-                        <li <?php if (in_array($controller_id, array('team_registration', 'person','market','user'))): ?>class="active open"<?php endif; ?>>
+                        <li <?php if (in_array($controller_id, array('chuangyi','team_registration', 'person','market','user'))): ?>class="active open"<?php endif; ?>>
                             <a href="#" class="dropdown-toggle">
                                 <i class="icon-edit"></i>
                                 <span class="menu-text"> 报名信息 </span>
@@ -186,10 +186,16 @@ window.jQuery || document.write("<script src='<?php echo Yii::app()->params['hos
                                         用户管理
                                     </a>
                                 </li>-->
+                                <li <?php if ($controller_id == 'chuangyi'): ?>class="active"<?php endif; ?>>
+                                    <a <?php if ($controller_id == 'chuangyi'): ?>class="active"<?php endif; ?> href="<?php echo $this->createUrl('/admin/chuangyi') ?>">
+                                        <i class="icon-double-angle-right"></i>
+                                        创意组
+                                    </a>
+                                </li>
                                 <li <?php if ($controller_id == 'team_registration'): ?>class="active"<?php endif; ?>>
                                     <a <?php if ($controller_id == 'team_registration'): ?>class="active"<?php endif; ?> href="<?php echo $this->createUrl('/admin/team_registration') ?>">
                                         <i class="icon-double-angle-right"></i>
-                                        企业组
+                                        创业组
                                     </a>
                                 </li>
 

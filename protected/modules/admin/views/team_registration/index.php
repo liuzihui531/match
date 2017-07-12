@@ -49,10 +49,11 @@
                                     </label>
                                 </td>
                                 <td><?php echo $v->id ?></td>
-                                <td><?php echo ThisTools::getRegion($v->area_id) ?></td>
+                                <td><?php echo ThisTools::getRegion($v->city) ?></td>
                                 <td><?php echo $v->school ?></td>
                                 <td><?php 
-                                $business_platform = !empty($v->business_platform) ? json_decode($v->business_platform, true) : array();
+                                $business_platform = !empty($v->platform) ? json_decode($v->platform, true) : array();
+
                                 if($business_platform){
                                     foreach ($business_platform as $key => $val) {
                                         echo $platform[$val].'  '; 
@@ -60,7 +61,7 @@
                                 }
 
                                 ?></td>
-                                <td><?php echo isset($v->user) ? $v->user->email : "" ?></td>
+                                <td><?php echo $v->email ?></td>
                                 <td><?php echo date('Y-m-d H:i:s', $v->created) ?></td>
                                 <td>
                                     <a href="<?php echo $this->createUrl('detail', array('id' => $v->id)) ?>">查看详情</a>

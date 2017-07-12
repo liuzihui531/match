@@ -7,16 +7,16 @@
 		<div class="widget-body">
 			<div class="widget-main no-padding">
 				<ul class="list-unstyled list-striped pricing-table-header">
-					<li>所属市县：<?php echo ThisTools::getRegion($model->area_id) ?></li>
+					<li>所属市县：<?php echo ThisTools::getRegion($model->city) ?></li>
 					<li>就读院校：<?php echo $model->school ?></li>
-					<li>参赛代表姓名：<?php echo $model->represent_name ?></li>
-					<li>身份证号：<?php echo $model->idcard ?></li>
-					<li>学历：<?php echo $model->degree ?></li>
+					<li>参赛代表姓名：<?php echo $model->rep_name ?></li>
+					<li>身份证号：<?php echo $model->id_card ?></li>
+					<li>学历：<?php echo $model->education ?></li>
 					<li>联系电话：<?php echo $model->mobile ?></li>
 					<li>E-mail：<?php echo $model->email ?></li>
-					<li>项目或企业名称：<?php echo $model->project_name ?></li>
+					<li>项目或企业名称：<?php echo $model->enterprise ?></li>
 					<li>电商平台：<div class="fcheckbox_check">
-                                <?php $thisPlatform = !empty($model->business_platform) ? json_decode($model->business_platform,true) : array();  ?>
+                                <?php $thisPlatform = !empty($model->platform) ? json_decode($model->platform,true) : array();  ?>
                                 <?php if($thisPlatform): ?>
 	                                <?php foreach (ThisTools::getBusinessPlatform() as $k => $v): ?>
 	                                    <label><input name="rep[platform][]" id="" type="checkbox" disabled <?php echo $thisPlatform && array_search($k, $thisPlatform) !== false ? "checked" : "";  ?> value="<?php echo $k ?>" />&nbsp;<?php echo $v ?></label>
@@ -24,9 +24,9 @@
 	                            <?php endif;?>
                             </div>
                     </li>
-					<li>项目简介：<?php echo $model->project_introduct ?></li>
-					<li>附件：<?php if($model->attach): ?>
-                            <a href="<?php echo $model->attach ?>"><?php echo '下载附件'; ?></a>
+					<li>项目简介：<?php echo $model->introduction ?></li>
+					<li>附件：<?php if($model->file_rep): ?>
+                            <a href="<?php echo $model->file_rep ?>"><?php echo '下载附件'; ?></a>
                         <?php endif; ?></li>
 				</ul>
 			</div>
