@@ -64,7 +64,14 @@ a{ text-decoration:none; color:#565656;}
 .main3_con .main3_con_pic a{ display:block; width:232px; height:152px; float:left;margin-left:10px; margin-bottom:13px;}
 .main3_con .main3_con_pic img{ width:232px; height:152px;}
 .main4_tit{background:url(../images/tit4.gif) no-repeat top center; width:310px; height:136px; margin:118px auto 0;}
-.main4_con{ width:964px; overflow:hidden;}
+
+/*.main4_con{ width:964px; overflow:hidden;}*/
+
+.main4_con{ width:964px; overflow:hidden; margin-top:86px; font-size:16px; text-align:center;}
+.main4_con .main4_con_more a{ display:block; color:#fff; width:183px; height:46px; background:#00ba6f; color:#fff; line-height:46px; text-align:center; margin:46px auto 0;}
+.main4_con .main4_con_more a:hover{background:#009e5e;}
+
+
 .main4_con_l{float:left; width:382px;overflow:hidden; padding-left:34px; margin-top:86px;}
 .main4_con_l .main4_con_l_tit{ background:url(../images/bg_tit.gif) no-repeat 0 0; width:178px; height:34px; padding-top:16px; text-align:center; font-size:18px; margin:0 auto;}
 .main4_con_l .main4_con_l_con ul{ width:319px; margin:30px auto 0;overflow:hidden; }

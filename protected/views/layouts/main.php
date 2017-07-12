@@ -21,7 +21,7 @@
     	<a href="<?php echo $this->createAbsoluteUrl("/") ?>#menu" <?php if($this->id == 'index'): ?>class="on"<?php endif; ?>>大赛介绍</a>
     	<a href="<?php echo $this->createAbsoluteUrl("/") ?>#m2" <?php if(in_array($this->id, $m2)): ?>class="on"<?php endif; ?>>报名通道</a>
     	<a href="<?php echo $this->createAbsoluteUrl("/") ?>#m3">赛事风采</a>
-    	<a href="<?php echo $this->createAbsoluteUrl("/") ?>#m4">产品市集</a>
+    	<a href="<?php echo $this->createAbsoluteUrl("/") ?>#m4">包装设计</a>
     	<a href="<?php echo $this->createAbsoluteUrl("/") ?>#m5">专家评委</a>
     	<a href="<?php echo $this->createAbsoluteUrl("/") ?>#m6">专题链接</a>
         <?php if(Yii::app()->user->id): ?>

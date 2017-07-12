@@ -6,7 +6,7 @@
 			$criteria = new CDbCriteria();
 			$count = User::model()->count($criteria);
 	        $pager = new CPagination($count);
-	        $pageSize = 10;
+	        $pageSize = 100;
             $pager->pageSize = $pageSize;
             $pager->applyLimit($criteria);
 	        $model = User::model()->findAll($criteria);

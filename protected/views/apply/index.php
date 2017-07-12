@@ -1,5 +1,5 @@
 <div class="show">
-    <div class="show_tit">青年农村电商大赛报名表(企业组)</div>
+    <div class="show_tit">青年农村电商大赛报名表(创意组)</div>
     <div class="show_form">
         <form id='form1' class="bootstrap-frm" enctype="multipart/form-data" method="post" action="<?php echo $this->createUrl("save") ?>">
             <?php if($model): ?>

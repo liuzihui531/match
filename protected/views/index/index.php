@@ -5,7 +5,7 @@
             <div class="main1_con1_l"><img src="/front/images/bg_pic1.gif" width="287" height="386" /></div>
             <div class="main1_con1_r">
                 <div class="main1_con1_r_tit">大赛宗旨</div>
-                <div class="main1_con1_r_con">大赛旨在促进电商应用，推动互联网与农业的融合，助力海南农业现代化发展；鼓励支持青年抓住信息化进程给农业农村发展带来的市场机遇，挖掘和培养海南青年农村电商人才，发挥带头人创新创业和示范引领的作用。扶持一批优秀电商创业项目或企业，用电子商务等现代商业模式拓宽创业致富渠道。</div>
+                <div class="main1_con1_r_con">　　根据团中央等部委举办第三届创青春中国青年创新创业大赛的通知精神，为发现和扶持我省青年创业人才和项目，遴选优秀选手参加全国比赛，共青团海南省委决定开展中国青年创新创业大赛海南省选拔赛。<br />　　搭建青年创新创业展示交流、资源对接、项目孵化等平台，整合创业服务机构、创业园区、创投基金、创业导师等资源，营造关心支持青年创新创业的社会氛围，帮助广大青年增强创业能力、提升创业成功率，并重点扶持具有发展潜力的创业项目和团队。</div>
                 <div class="main1_con1_r_more"><a href="<?php echo $this->createUrl('about'); ?>#menu">查看详细参赛要求 +</a></div>
             </div>
         </div>
@@ -14,15 +14,19 @@
             <div class="main1_con2_l">
                 <div class="main1_con2_l_tit">赛事新闻</div>
                 <ul>
-                	<li><a href="http://www.hcyc.cn/index/about.html#menu" target="_blank"><span>2017海南青年农村电商大赛启动</span><i>5.26</i></a></li>
+                	<li><a href="http://www.hcyc.cn/index/about.html#menu" target="_blank"><span>[媒体报道]有创意？来报名啊</span><i>&nbsp;&nbsp;6.4</i></a></li>
+                    <li><a href="http://difang.gmw.cn/roll2/2017-06/03/content_118778866.htm" target="_blank"><span>[媒体报道]海南青年农村电商大赛报名于本月25日截止</span><i>&nbsp;&nbsp;6.3</i></a></li>
+                	<li><a href="http://www.hinews.cn/news/system/2017/06/02/031140990.shtml" target="_blank"><span>[媒体报道]2017海南青年农村电商大赛邀您参加 总奖金额近60万元</span><i>&nbsp;&nbsp;6.2</i></a></li>
+                	<li><a href="http://www.hcyc.cn/index/about.html#menu" target="_blank"><span>[媒体报道]海南青年农村电商大赛接受报名 总奖金近60万</span><i>&nbsp;&nbsp;6.2</i></a></li>	
+                    <li><a href="http://www.hcyc.cn/index/about.html#menu" target="_blank"><span>2017海南青年农村电商大赛启动</span><i>5.26</i></a></li>
                 </ul>
             </div>
             <div class="main1_con2_r">
                 <div class="main1_con2_r_tit">赛事日程</div>
                 <div class="main1_con2_r_con">
-                    <p>报名时间，报名截止时间为2017年6月25日。</p>
+                    <p>报名时间（已延期，以通知为准）</p>
                     <p>初赛（七月初）</p>
-                    <p>电商训练营（7月上旬）</p>
+                  <p>电商训练营（7月上旬）</p>
                     <p>复赛（7月中下旬）</p>
                     <p>决赛（8月初）</p>
                 </div>
@@ -81,12 +85,12 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
+<!--<script type="text/javascript">
 function disp_alert()
 {
 alert("报名通道近期开放，敬请留意！")
 }
-</script>
+</script>-->
 
 <div class="main" name="m3" id="m3">
     <div class="main_con">
@@ -123,16 +127,8 @@ alert("报名通道近期开放，敬请留意！")
     <div class="main_con">
         <div class="main4_tit"></div>
         <div class="main4_con">
-            <div class="main4_con_l">
-                <div class="main4_con_l_tit">往期电商产品展示</div>
-                <div class="main4_con_l_con">
-                    <ul>
-                    	<li><a href="http://www.hcyc.cn/shiji/yiruiyuan.html" target="_blank">产品市集：伊睿缘菩提</a></li>
-                        <li><a href="http://www.hcyc.cn/shiji/dahepai.html" target="_blank">产品市集：大禾拍</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="main4_con_r"></div>
+            <p>如果你需要改善农产品包装，我们可以协调提供免费的设计方案，请先填写这个表格</p>
+        <div class="main4_con_more"><a href="http://cn.mikecrm.com/T4gE5S" target="_blank">免费设计申请 +</a></div>
         </div>
     </div>
 </div>
