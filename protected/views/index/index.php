@@ -74,8 +74,8 @@
         <div class="main2_tit"></div>
         <div class="main2_con">
             <ul>
-                <li><a href="<?php echo $this->createUrl('business/index') ?>" target="_blank" title="进入创业组报名">创业组 ></a></li>
-                <li><a href="<?php echo $this->createUrl('apply/index') ?>" title="进入创意组报名">创意组 ></a></li>
+                <li><a href="<?php echo $this->createUrl('apply/index',array('user_type' => 1)) ?>" target="_blank" title="进入创业组报名">创业组 ></a></li>
+                <li><a href="<?php echo $this->createUrl('apply/index',array('user_type' => 0)) ?>" title="进入创意组报名">创意组 ></a></li>
                 <li><a href="http://www.hcyc.cn/news/dianshangtuijin.html" target="_blank" title="进入电商推进组报名">电商推进组 ></a></li>
             </ul>
         </div>

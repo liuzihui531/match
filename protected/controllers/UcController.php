@@ -1,14 +1,17 @@
 <?php 
 class UcController extends UcBaseController{
 	public function actionIndex(){
-		$regModel = TeamRegistration::model()->findByAttributes(array('user_id'=>Yii::app()->user->id));
+		/*$regModel = TeamRegistration::model()->findByAttributes(array('user_id'=>Yii::app()->user->id));
 		$personModel = Person::model()->findByAttributes(array('user_id'=>Yii::app()->user->id));
 		$marketModel = Market::model()->findByAttributes(array('user_id'=>Yii::app()->user->id));
 		$this->render("index",array(
 			'regModel' => $regModel,
 			'personModel' => $personModel,
 			'marketModel' => $marketModel,
-		));
+		));*/
+		$id = Yii::app()->user->id;
+		$model = User::model()->findByPk($id);
+		$this->render('index',array('model' => $model));
 	}
 
 	public function actionBuildSign(){
@@ -32,6 +35,7 @@ class UcController extends UcBaseController{
 			$sign_num = mt_rand($start,$end);
 		}
 		$user_model->sign_num = $sign_num;
+		$user_model->password2 = $user_model->password;
 		$user_model->save();
 		if($user_model->hasErrors()){
 			echo json_encode(array('sta'=>0,'msg'=>Utils::getFirstError($user_model->errors)));exit;

@@ -5,6 +5,7 @@
             <?php if($model): ?>
                     <input type="hidden" name="id" value="<?php echo $model->id ?>" />
             <?php endif; ?>
+            <input type="hidden" name="user_type" value="<?php echo $user_type ?>" />
             <h2>参赛基本信息<span>请务必填写真实信息</span></h2>
             <label>
                 <span>手机号码:</span>
@@ -23,43 +24,43 @@
                 <div class="fcheckbox_name">所属县市 *:</div>
                 <div class="fcheckbox_check">
                     <?php foreach(ThisTools::getRegion() as $k=>$v): ?>
-                    <label style="display: inline;padding:0px 5px"><input name="area_id" type="radio" value="<?php echo $k ?>" />&nbsp;<?php echo $v; ?></label>
+                    <label style="display: inline;padding:0px 5px"><input <?php if ($model->area_id == $k): ?>checked<?php endif ?> name="area_id" type="radio" value="<?php echo $k ?>" />&nbsp;<?php echo $v; ?></label>
                     <?php endforeach; ?>
                 </div>
             </div>
 
             <label>
                 <span>所在院校:</span>
-                <input id="" type="text" name="school" value="<?php //echo $model->school ?>"  placeholder="所在院校（仅供在校学生填写）" />*
+                <input id="" type="text" name="school" value="<?php echo $model->school ?>"  placeholder="所在院校（仅供在校学生填写）" />*
             </label>
 
             <label>
                 <span>参赛代表姓名:</span>
-                <input id="" type="text" name="represent_name" value="<?php //echo $model->represent_name ?>"  placeholder="参赛代表姓名" />*
+                <input id="" type="text" name="represent_name" value="<?php echo $model->represent_name ?>"  placeholder="参赛代表姓名" />*
             </label>
 
             <label>
                 <span>出生年月:</span>
-                <input id="" type="date" name="birthday" value="<?php //echo $model->birthday ?>"  placeholder="出生年月" />
+                <input id="" type="date" name="birthday" value="<?php echo $model->birthday ?>"  placeholder="出生年月" />
             </label>
 
             <label>
                 <span>身份证号:</span>
-                <input id="" type="text" name="idcard" value="<?php //echo $model->idcard ?>"  placeholder="身份证号" />
+                <input id="" type="text" name="idcard" value="<?php echo $model->idcard ?>"  placeholder="身份证号" />
             </label>
 
             <label>
                 <span>学历和毕业院校:</span>
-                <input id="" type="text" name="degree" value="<?php //echo $model->degree ?>"  placeholder="学历和毕业院校" />*
+                <input id="" type="text" name="degree" value="<?php echo $model->degree ?>"  placeholder="学历和毕业院校" />*
             </label>
             
             <label>
                 <span>邮箱:</span>
-                <input id="" type="text" name="email" value="<?php //echo $model->email ?>"  placeholder="邮箱" />*
+                <input id="" type="text" name="email" value="<?php echo $model->email ?>"  placeholder="邮箱" />*
             </label>
             <label>
                 <span>微信:</span>
-                <input id="" type="text" name="wechat" value="<?php //echo $model->wechat ?>"  placeholder="微信" />*
+                <input id="" type="text" name="wechat" value="<?php echo $model->wechat ?>"  placeholder="微信" />*
             </label>
 
 
@@ -67,11 +68,11 @@
             <h2>参赛项目信息</h2>
             <label>
                 <span>项目名称:</span>
-                <input id="" type="text" name="project_name" value="<?php //echo $model->project_name ?>"  placeholder="项目名称" />*
+                <input id="" type="text" name="project_name" value="<?php echo $model->project_name ?>"  placeholder="项目名称" />*
             </label>
             <label>
                 <span>项目形成时间:</span>
-                <input id="" type="date" name="project_build_time" value="<?php //echo $model->project_name ?>"  placeholder="项目形成时间" />*
+                <input id="" type="date" name="project_build_time" value="<?php echo $model->project_build_time ?>"  placeholder="项目形成时间" />*
             </label>
 
 
@@ -79,39 +80,39 @@
                 <div class="fcheckbox_name">电商平台 *:</div>
                 <div class="fcheckbox_check">
                     <?php foreach(ThisTools::getBusinessPlatform() as $k=>$v): ?>
-                    <label><input name="business_platform[]"  type="checkbox" value="<?php echo $k ?>" />&nbsp;<?php echo $v; ?></label>
+                    <label><input name="business_platform[]" <?php if (in_array($k, $model->business_platform)): ?>checked <?php endif ?> type="checkbox" value="<?php echo $k ?>" />&nbsp;<?php echo $v; ?></label>
                     <?php endforeach; ?>     
                 </div>
                 <div class="clear"></div> 
             </div>
             <label>
                 <span>项目简介:</span>
-                <textarea name="project_introduct"></textarea>
+                <textarea name="project_introduct"><?php echo $model->project_introduct; ?></textarea>
             </label>
 
             <?php for($i = 1; $i <= 3; $i++): ?>
             <h2>团队成员情况<span>成员<?php echo $i ?></span></h2>
             <label>
                 <span>姓名:</span>
-                <input id="" type="text" name="people_info[<?php echo $i ?>][name]" value=""  placeholder="姓名" />*
+                <input id="" type="text" name="people_info[<?php echo $i ?>][name]" value="<?php echo $model->people_info ? $model->people_info[$i]['name'] : "" ?>"  placeholder="姓名" />*
             </label>
             <label>
                 <span>性别:</span>
                 <?php foreach (ThisTools::getGender() as $k => $v): ?>
-                    <label ><input name="people_info[<?php echo $i ?>][sex]" type="radio" value="<?php echo $k ?>" />&nbsp;<?php echo $v; ?></label>
+                    <label ><input <?php if ($model->people_info[$i]['sex'] == $k): ?>checked<?php endif ?> name="people_info[<?php echo $i ?>][sex]" type="radio" value="<?php echo $k ?>" />&nbsp;<?php echo $v; ?></label>
                 <?php endforeach ?>
             </label>
             <label>
                 <span>户籍地:</span>
-                <input id="" type="text" name="people_info[<?php echo $i ?>][native_place]" value=""  placeholder="户籍地" />*
+                <input id="" type="text" name="people_info[<?php echo $i ?>][native_place]" value="<?php echo $model->people_info ? $model->people_info[$i]['native_place'] : "" ?>"  placeholder="户籍地" />*
             </label>
             <label>
                 <span>年龄:</span>
-                <input id="" type="text" name="people_info[<?php echo $i ?>][age]" value=""  placeholder="年龄" />*
+                <input id="" type="text" name="people_info[<?php echo $i ?>][age]" value="<?php echo $model->people_info ? $model->people_info[$i]['age'] : "" ?>"  placeholder="年龄" />*
             </label>
             <label>
                 <span>学历:</span>
-                <input id="" type="text" name="people_info[<?php echo $i ?>][degree]" value=""  placeholder="学历" />*
+                <input id="" type="text" name="people_info[<?php echo $i ?>][degree]" value="<?php echo $model->people_info ? $model->people_info[$i]['degree'] : "" ?>"  placeholder="学历" />*
             </label>
             <?php endfor; ?>
 
@@ -128,6 +129,10 @@
             <label>
                 <span>附件:</span>
                 <input id="" type="file" name="attach" value=""  placeholder="附件" />*
+                <?php if ($model->attach): ?>
+                    <span ><a  style="color:red" href="<?php echo $model->attach ?>">点击下载附件</a></span>
+                    <div class="clear"></div>
+                <?php endif ?>
             </label>
             
 

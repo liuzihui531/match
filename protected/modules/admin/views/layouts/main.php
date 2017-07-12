@@ -186,14 +186,14 @@ window.jQuery || document.write("<script src='<?php echo Yii::app()->params['hos
                                         用户管理
                                     </a>
                                 </li>-->
-                                <li <?php if ($controller_id == 'chuangyi'): ?>class="active"<?php endif; ?>>
-                                    <a <?php if ($controller_id == 'chuangyi'): ?>class="active"<?php endif; ?> href="<?php echo $this->createUrl('/admin/chuangyi') ?>">
+                                <li <?php if ($controller_id == 'chuangyi' && Yii::app()->request->getParam('user_type',0) ==0): ?>class="active"<?php endif; ?>>
+                                    <a <?php if ($controller_id == 'chuangyi' && Yii::app()->request->getParam('user_type',0) ==0): ?>class="active"<?php endif; ?> href="<?php echo $this->createUrl('/admin/chuangyi') ?>">
                                         <i class="icon-double-angle-right"></i>
                                         创意组
                                     </a>
                                 </li>
-                                <li <?php if ($controller_id == 'team_registration'): ?>class="active"<?php endif; ?>>
-                                    <a <?php if ($controller_id == 'team_registration'): ?>class="active"<?php endif; ?> href="<?php echo $this->createUrl('/admin/team_registration') ?>">
+                                <li <?php if ($controller_id == 'chuangyi' && Yii::app()->request->getParam('user_type',0) ==1): ?>class="active"<?php endif; ?>>
+                                    <a <?php if ($controller_id == 'chuangyi' && Yii::app()->request->getParam('user_type',0) ==1): ?>class="active"<?php endif; ?> href="<?php echo $this->createUrl('/admin/chuangyi',array('user_type' => 1)) ?>">
                                         <i class="icon-double-angle-right"></i>
                                         创业组
                                     </a>
