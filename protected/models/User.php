@@ -54,7 +54,7 @@ class User extends CActiveRecord
 			array('area_id, created', 'required'),
 			array('project_introduct, people_info', 'safe'),
 			array('area_id, created, sign_num, user_type', 'numerical', 'integerOnly'=>true),
-			array('group,username, school, represent_name, birthday, idcard, degree, mobile, email, wechat, project_name, project_build_time, business_platform', 'length', 'max'=>128),
+			array('credit,is_illegal,group,username, school, represent_name, birthday, idcard, degree, mobile, email, wechat, project_name, project_build_time, business_platform', 'length', 'max'=>128),
 			array('password', 'length', 'max'=>32),
 			array('attach', 'length', 'max'=>256),
 			array('project_introduct, people_info', 'safe'),
