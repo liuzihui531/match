@@ -16,9 +16,12 @@
  * @property string $email
  * @property string $enterprise
  * @property string $credit
- * @property integer $platform
+ * @property string $platform
  * @property string $introduction
+ * @property string $file_rep
  * @property integer $created
+ * @property integer $user_id
+ * @property string $people_info
  */
 class TeamRegistration extends CActiveRecord
 {
@@ -38,17 +41,17 @@ class TeamRegistration extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('city, birth, id_card, mobile, credit, platform, created', 'required'),
-			array('city, birth, platform, created', 'numerical', 'integerOnly'=>true),
-			array('school, is_illegal, enterprise, credit,file_rep', 'length', 'max'=>128),
+			array('city, birth, id_card, mobile, created', 'required'),
+			array('city, birth, created, user_id', 'numerical', 'integerOnly'=>true),
+			array('school, is_illegal, enterprise, credit, platform, file_rep', 'length', 'max'=>128),
 			array('rep_name', 'length', 'max'=>16),
 			array('id_card, education', 'length', 'max'=>32),
 			array('mobile', 'length', 'max'=>11),
 			array('email', 'length', 'max'=>64),
-                        array("introduction","safe"),
+			array('introduction, people_info', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, city, school, rep_name, birth, id_card, is_illegal, education, mobile, email, enterprise, credit, platform, introduction, created', 'safe', 'on'=>'search'),
+			array('id, city, school, rep_name, birth, id_card, is_illegal, education, mobile, email, enterprise, credit, platform, introduction, file_rep, created, user_id, people_info', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,8 +63,6 @@ class TeamRegistration extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'user' => array(self::BELONGS_TO,'User','user_id'),
-			'team' => array(self::HAS_MANY,'Team','tid'),
 		);
 	}
 
@@ -85,7 +86,10 @@ class TeamRegistration extends CActiveRecord
 			'credit' => '工商注册上的信用代码',
 			'platform' => '电商平台',
 			'introduction' => '简介',
+			'file_rep' => '附件',
 			'created' => '报名时间',
+			'user_id' => 'User',
+			'people_info' => 'People Info',
 		);
 	}
 
@@ -119,9 +123,12 @@ class TeamRegistration extends CActiveRecord
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('enterprise',$this->enterprise,true);
 		$criteria->compare('credit',$this->credit,true);
-		$criteria->compare('platform',$this->platform);
+		$criteria->compare('platform',$this->platform,true);
 		$criteria->compare('introduction',$this->introduction,true);
+		$criteria->compare('file_rep',$this->file_rep,true);
 		$criteria->compare('created',$this->created);
+		$criteria->compare('user_id',$this->user_id);
+		$criteria->compare('people_info',$this->people_info,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
