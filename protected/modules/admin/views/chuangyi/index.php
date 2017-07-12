@@ -60,7 +60,7 @@
                                 }
 
                                 ?></td>
-                                <td><?php echo isset($v->user) ? $v->user->email : "" ?></td>
+                                <td><?php echo $v->username?></td>
                                 <td><?php echo date('Y-m-d H:i:s', $v->created) ?></td>
                                 <td>
                                     <a href="<?php echo $this->createUrl('detail', array('id' => $v->id)) ?>">查看详情</a>

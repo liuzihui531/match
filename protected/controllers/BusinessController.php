@@ -3,8 +3,8 @@ class BusinessController extends UcBaseController{
 	public function actionIndex(){
 		$user_id = Yii::app()->user->id;
 		$model = TeamRegistration::model()->findByAttributes(array('user_id' => $user_id));
+		$model = new TeamRegistration();
 		$model->platform = $model->platform ? json_decode($model->platform, true) : array();
-		$model->birth = $model->birth ? date("Y-m-d", $model->birth) : "";
 		$model->people_info = $model->people_info ? json_decode($model->people_info, true) : array();
         $this->render('index',array('model' => $model));
 	}

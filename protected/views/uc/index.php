@@ -4,7 +4,7 @@
     <div class="show_form">
         <div class="uc_con">
         <h2>已登录用户<span>当前账号 :<?php echo Yii::app()->user->name ?> &nbsp;&nbsp;&nbsp;&nbsp;个人中心&nbsp;&nbsp;&nbsp;&nbsp;<!--<a href="#">修改报名表</a>-->&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo $this->createUrl("/login/logout") ?>">安全退出</a></span> </h2>
-        <h2>
+        <!--<h2>
         	在线抽签
             <span><font class="sign_num" style="font-size:16px; color:#f00;"><?php if(!Yii::app()->session['user']->sign_num): ?><a href="javascript:void(0)" style="color:#00ba64">排号抽签（点击抽签）</a><?php else: ?>抽签号：<?php echo Yii::app()->session['user']->sign_num ?><?php endif; ?>&nbsp;&nbsp;（请仔细阅读以下比赛安排，提前到场准备。）</font><br />
             <?php 
@@ -30,8 +30,17 @@
                 }
             ?>
             </span>
+        </h2>-->
+        <h2>
+            已报项目
+            <span>
+                <?php if ($model->user_type == 0): ?>
+                    <a href="<?php echo $this->createUrl('apply/index',array('user_type' => 0)) ?>">创意组</a>
+                <?php else: ?>
+                    <a href="<?php echo $this->createUrl('apply/index',array('user_type' => 1)) ?>"  title="进入创业组报名">创业组</a>
+                <?php endif ?>
+            </span>
         </h2>
-
             
 	  </div>
     </div>

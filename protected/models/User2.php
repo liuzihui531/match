@@ -23,12 +23,9 @@
  * @property string $people_info
  * @property string $attach
  * @property integer $created
- * @property integer $sign_num
- * @property integer $user_type
  */
 class User extends CActiveRecord
 {
-	public $password2;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -36,6 +33,8 @@ class User extends CActiveRecord
 	{
 		return 'user';
 	}
+
+	public $password2;
 
 	/**
 	 * @return array validation rules for model attributes.
@@ -52,15 +51,14 @@ class User extends CActiveRecord
             array('email', 'email','allowEmpty' => true, 'message' => '邮箱格式错误'),
             array('password2', 'compare', 'compareAttribute' => 'password', 'message' => '两次密码不一致'),
 			array('area_id, created', 'required'),
-			array('project_introduct, people_info', 'safe'),
-			array('area_id, created, sign_num, user_type', 'numerical', 'integerOnly'=>true),
-			array('group,username, school, represent_name, birthday, idcard, degree, mobile, email, wechat, project_name, project_build_time, business_platform', 'length', 'max'=>128),
+			array('area_id, created, sign_num', 'numerical', 'integerOnly'=>true),
+			array('username, school, represent_name, birthday, idcard, degree, mobile, email, wechat, project_name, project_build_time, business_platform', 'length', 'max'=>128),
 			array('password', 'length', 'max'=>32),
 			array('attach', 'length', 'max'=>256),
 			array('project_introduct, people_info', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, username, password, area_id, school, represent_name, birthday, idcard, degree, mobile, email, wechat, project_name, project_build_time, business_platform, project_introduct, people_info, attach, created, sign_num, user_type', 'safe', 'on'=>'search'),
+			array('id, username, password, area_id, school, represent_name, birthday, idcard, degree, mobile, email, wechat, project_name, project_build_time, business_platform, project_introduct, people_info, attach, created', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -90,7 +88,7 @@ class User extends CActiveRecord
 			'birthday' => '出生年月',
 			'idcard' => '身份证号',
 			'degree' => '学历和毕业院校',
-			'mobile' => '联系电话',
+			'mobile' => '手机号码',
 			'email' => '邮箱',
 			'wechat' => '微信',
 			'project_name' => '项目名称',
@@ -100,8 +98,6 @@ class User extends CActiveRecord
 			'people_info' => '团队成员情况',
 			'attach' => '附件',
 			'created' => '时间',
-			'sign_num' => 'Sign Num',
-			'user_type' => '0创意，1创业',
 		);
 	}
 
@@ -142,8 +138,6 @@ class User extends CActiveRecord
 		$criteria->compare('people_info',$this->people_info,true);
 		$criteria->compare('attach',$this->attach,true);
 		$criteria->compare('created',$this->created);
-		$criteria->compare('sign_num',$this->sign_num);
-		$criteria->compare('user_type',$this->user_type);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

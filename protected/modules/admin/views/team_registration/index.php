@@ -61,10 +61,11 @@
                                     </label>
                                 </td>-->
                                 <td><?php echo $v->id ?></td>
-                                <td><?php echo ThisTools::getRegion($v->area_id) ?></td>
+                                <td><?php echo ThisTools::getRegion($v->city) ?></td>
                                 <td><?php echo $v->school ?></td>
                                 <td><?php 
-                                $business_platform = !empty($v->business_platform) ? json_decode($v->business_platform, true) : array();
+                                $business_platform = !empty($v->platform) ? json_decode($v->platform, true) : array();
+
                                 if($business_platform){
                                     foreach ($business_platform as $key => $val) {
                                         echo $platform[$val].'  '; 
@@ -72,6 +73,7 @@
                                 }
 
                                 ?></td>
+<<<<<<< HEAD
                                 <td><?php echo isset($v->user) ? $v->user->email : "" ?></td>
 				<td><?php echo $v->represent_name ?></td>
 				<td><?php echo $v->birthday ?></td>
@@ -85,6 +87,9 @@
 				<td><?php echo $v->project_introduct ?></td>
 				<td><?php echo $v->people_info ?></td>
 				<td><?php echo $v->attach ? "http://hcyc.cn".$v->attach : ""; ?></td>
+=======
+                                <td><?php echo $v->email ?></td>
+>>>>>>> a6bb19cba4dd21ad91ae1a8c85db4cc4c1229750
                                 <td><?php echo date('Y-m-d H:i:s', $v->created) ?></td>
                                 <td>
                                     <a href="<?php echo $this->createUrl('detail', array('id' => $v->id)) ?>">查看详情</a>
