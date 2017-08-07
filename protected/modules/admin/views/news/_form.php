@@ -25,7 +25,7 @@ $form = $this->beginWidget('CActiveForm', array(
         <?php echo $form->dropDownList($model, 'cate_id', News::model()->getCateKv(), array('class' => 'col-xs-10 col-sm-5', 'prompt' => '--请选择分类--')) ?>
     </div>
 </div>
-<div class="form-group">
+<!-- <div class="form-group">
     <?php echo $form->labelEx($model, 'summary', array('class' => 'col-sm-3 control-label no-padding-right')) ?>
 
     <div class="col-sm-9">
@@ -39,18 +39,17 @@ $form = $this->beginWidget('CActiveForm', array(
         <?php echo $form->checkBox($model, 'is_hot', array('class' => 'ace ace-switch ace-switch-5')) ?>
         <span class="lbl"></span>
     </label>
-</div>
+</div> -->
 <div class="form-group">
     <?php echo $form->labelEx($model, 'content', array('class' => 'col-sm-3 control-label no-padding-right')) ?>
     <div class="col-sm-9">
         <script id="container" name="News[content]" type="text/plain" data-width="1200"><?php echo $model->content; ?></script>
     </div>
 </div>
-<div class="form-group">
+<!-- <div class="form-group">
     <?php echo $form->labelEx($model, 'image', array('class' => 'col-sm-3 control-label no-padding-right')) ?>
     <div class="col-sm-9">
         <div id="uploader-demo">
-            <!--用来存放item-->
             <div id="fileList" class="uploader-list"></div>
             <div id="filePicker" data-name="image" data-file-num="2">选择图片</div>
         </div>
@@ -90,7 +89,7 @@ $form = $this->beginWidget('CActiveForm', array(
         <?php echo $form->textarea($model, 'seo_description', array('class' => 'col-xs-10 col-sm-4 h140', 'placeholder' => '')) ?>
         &nbsp;不填则为摘要内容
     </div>
-</div>
+</div> -->
 <div class="clearfix form-actions">
     <div class="col-md-offset-3 col-md-9">
         <button class="btn btn-info" type="button" id="submit">

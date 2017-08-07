@@ -213,6 +213,30 @@ window.jQuery || document.write("<script src='<?php echo Yii::app()->params['hos
                                 </li>
                             </ul>
                         </li>
+                        <li <?php if (in_array($controller_id, array('news_category', 'news'))): ?>class="active open"<?php endif; ?>>
+                            <a href="#" class="dropdown-toggle">
+                                <i class="icon-edit"></i>
+                                <span class="menu-text"> 新闻资讯 </span>
+
+                                <b class="arrow icon-angle-down"></b>
+                            </a>
+
+                            <ul class="submenu">
+                                <li <?php if ($controller_id == 'news_category'): ?>class="active"<?php endif; ?>>
+                                    <a <?php if ($controller_id == 'news_category'): ?>class="active"<?php endif; ?> href="<?php echo $this->createUrl('/admin/news_category') ?>">
+                                        <i class="icon-double-angle-right"></i>
+                                        分类管理
+                                    </a>
+                                </li>
+
+                                <li <?php if ($controller_id == 'news'): ?>class="active"<?php endif; ?>>
+                                    <a <?php if ($controller_id == 'news'): ?>class="active"<?php endif; ?> href="<?php echo $this->createUrl('/admin/news') ?>">
+                                        <i class="icon-double-angle-right"></i>
+                                        资讯管理
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
 
                     </ul><!-- /.nav-list -->
 

@@ -14,11 +14,11 @@
             <div class="main1_con2_l">
                 <div class="main1_con2_l_tit">赛事新闻</div>
                 <ul>
-                	<li><a href="http://www.hcyc.cn/index/about.html#menu" target="_blank"><span>[媒体报道]有创意？来报名啊</span><i>&nbsp;&nbsp;6.4</i></a></li>
-                    <li><a href="http://difang.gmw.cn/roll2/2017-06/03/content_118778866.htm" target="_blank"><span>[媒体报道]海南青年农村电商大赛报名于本月25日截止</span><i>&nbsp;&nbsp;6.3</i></a></li>
-                	<li><a href="http://www.hinews.cn/news/system/2017/06/02/031140990.shtml" target="_blank"><span>[媒体报道]2017海南青年农村电商大赛邀您参加 总奖金额近60万元</span><i>&nbsp;&nbsp;6.2</i></a></li>
-                	<li><a href="http://www.hcyc.cn/index/about.html#menu" target="_blank"><span>[媒体报道]海南青年农村电商大赛接受报名 总奖金近60万</span><i>&nbsp;&nbsp;6.2</i></a></li>	
-                    <li><a href="http://www.hcyc.cn/index/about.html#menu" target="_blank"><span>2017海南青年农村电商大赛启动</span><i>5.26</i></a></li>
+                    <?php if($news): ?>
+                        <?php foreach ($news as $key => $val): ?>
+                	       <li><a href="<?php echo $this->createUrl('news/view', array('id' => $val->id)) ?>#menu" target="_blank"><span><?php echo $val->title ?></span><i><?php echo date('m.d', $val->create_time) ?></i></a></li>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </ul>
             </div>
             <div class="main1_con2_r">
