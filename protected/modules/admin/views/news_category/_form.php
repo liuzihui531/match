@@ -18,7 +18,7 @@ $form = $this->beginWidget('CActiveForm', array(
         <?php echo $form->textField($model, 'name', array('class' => 'col-xs-10 col-sm-5', 'placeholder' => '')) ?>
     </div>
 </div>
-<div class="form-group">
+<!-- <div class="form-group">
     <?php echo $form->labelEx($model, 'sort', array('class' => 'col-sm-3 control-label no-padding-right')) ?>
 
     <div class="col-sm-9">
@@ -49,7 +49,7 @@ $form = $this->beginWidget('CActiveForm', array(
         <?php echo $form->textarea($model, 'seo_description', array('class' => 'col-xs-10 col-sm-4 h140', 'placeholder' => '')) ?>
         &nbsp;不填则为首页描述
     </div>
-</div>
+</div> -->
 <div class="clearfix form-actions">
     <div class="col-md-offset-3 col-md-9">
         <button class="btn btn-info" type="button" id="submit">

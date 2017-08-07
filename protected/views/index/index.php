@@ -14,7 +14,11 @@
             <div class="main1_con2_l">
                 <div class="main1_con2_l_tit">赛事新闻</div>
                 <ul>
-                	<li><a href="http://www.hcyc.cn/index/about.html#menu" target="_blank"><span>2017海南青年农村电商大赛启动</span><i>5.26</i></a></li>
+                    <?php if($news): ?>
+                        <?php foreach ($news as $key => $val): ?>
+                	       <li><a href="<?php echo $this->createUrl('news/view', array('id' => $val->id)) ?>#menu" target="_blank"><span><?php echo $val->title ?></span><i><?php echo date('m.d', $val->create_time) ?></i></a></li>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </ul>
             </div>
             <div class="main1_con2_r">

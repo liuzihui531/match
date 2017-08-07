@@ -7,7 +7,11 @@
  */
 Class IndexController extends IndexBaseController{
     public function actionIndex(){
-        $this->render('index');
+    	$cate_id = 1;
+    	$news = News::model()->findAllByAttributes(array('cate_id' => $cate_id));
+        $this->render('index',array(
+        	'news' => $news
+        ));
     }
     
     public function actionAbout(){

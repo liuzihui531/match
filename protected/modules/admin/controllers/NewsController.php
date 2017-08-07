@@ -52,7 +52,7 @@ class NewsController extends Controller {
         try {
             $model->attributes = Yii::app()->request->getPost('News');
             $model->content = Utils::enSlashes($model->content);
-            $model->image = implode(",", Yii::app()->request->getPost('image'));
+            // $model->image = implode(",", Yii::app()->request->getPost('image'));
             $model->save();
             if ($model->hasErrors()) {
                 throw new Exception(Utils::getFirstError($model->errors));
