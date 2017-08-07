@@ -35,9 +35,9 @@
             已报项目
             <span>
                 <?php if ($model->user_type == 0): ?>
-                    <a href="<?php echo $this->createUrl('apply/index',array('user_type' => 0)) ?>">创意组</a>
+                    <a href="<?php echo $this->createUrl('apply/index',array('user_type' => 0)) ?>">创意组　<span style="color:#999">（点击查看或修改已报信息）</span></a>　
                 <?php else: ?>
-                    <a href="<?php echo $this->createUrl('apply/index',array('user_type' => 1)) ?>"  title="进入创业组报名">创业组</a>
+                    <a href="<?php echo $this->createUrl('apply/index',array('user_type' => 1)) ?>"  title="进入创业组报名">创业组　<span style="color:#999">（点击查看或修改已报信息）</span></a>
                 <?php endif ?>
             </span>
         </h2>

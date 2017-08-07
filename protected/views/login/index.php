@@ -3,7 +3,7 @@
     <div class="show_form">
 
     	<form action="<?php echo $this->createUrl("login") ?>" method="post" class="bootstrap-frm" >
-        <h2>登录系统<span>已报名用户可登录并进行抽签。如果您无法登录，请致电：0898-66729363 咨询。<br />请注意：未报名用户禁止登录。</h2>
+        <h2>登录系统<span>已报名用户可登录查看或修改信息。如您无法登录，请致电：0898-66729363 咨询。<br />请注意：未报名用户禁止登录。</h2>
         	<label>
 				<span>登录账号 :</span>
 				<input id="" type="text" name="email" placeholder="请输入手机号或E-mail" />*
