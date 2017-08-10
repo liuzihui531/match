@@ -8,6 +8,9 @@
 Class IndexController extends IndexBaseController{
     public function actionIndex(){
     	$cate_id = 1;
+    	$criteria = new CDbCriteria();
+    	$criteria->compare('cate_id' ,$cate_id);
+    	$criteria->order = 'create_time desc';
     	$news = News::model()->findAllByAttributes(array('cate_id' => $cate_id));
         $this->render('index',array(
         	'news' => $news
