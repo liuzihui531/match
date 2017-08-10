@@ -16,7 +16,7 @@
                 <ul>
                     <?php if($news): ?>
                         <?php foreach ($news as $key => $val): ?>
-                	       <li><a href="<?php echo $this->createUrl('news/view', array('id' => $val->id)) ?>#menu" target="_blank"><span><?php echo $val->title ?></span><i><?php echo date('m.d', $val->create_time) ?>1</i></a></li>
+                	       <li><a href="<?php echo $this->createUrl('news/view', array('id' => $val->id)) ?>#menu" target="_blank"><span><?php echo $val->title ?></span><i><?php echo date('m.d', $val->create_time) ?></i></a></li>
                         <?php endforeach; ?>
                     <?php endif; ?>
                     <li><a href="http://difang.gmw.cn/roll2/2017-06/03/content_118778866.htm" target="_blank"><span>[媒体报道]海南青年农村电商大赛报名于本月25日截止</span><i>&nbsp;&nbsp;6.3</i></a></li>
