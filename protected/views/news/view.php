@@ -1,8 +1,8 @@
 <div class="clear"></div>
 
-<div class="about">
-	<div class="about_tit"></div>
-    <div class="about_con">
+<div class="show">
+	<div class="show_tit"><?php echo Utils::deSlashes($model->title); ?></div>
+    <div class="show_con" style="font-size:16px; line-height:2;">
     <?php echo Utils::deSlashes($model->content); ?>
 </div>
 </div>
